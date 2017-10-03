@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script');
+@charset "UTF-8";
+
+body{
+    margin:0px;
+    padding: 0px;
+}
+/* Remove the navbar's default margin-bottom and rounded borders */
+.navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+}
+
+input[type=submit] {
+    background-color: #4CAF50;
+    border: none;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+body {
+    font-family: "Lato", sans-serif;
+}
+
+.mySlides {
+    display: none;
+}
