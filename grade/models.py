@@ -8,7 +8,6 @@ class Disciplina(models.Model):
     cod_disc = models.CharField(max_length=50)
 
 
-
 class Professor(models.Model):
         Nome = models.CharField(max_length=50)
         disciplinas = models.ForeignKey('Disciplina')
@@ -20,4 +19,4 @@ class Aula(models.Model):
         email = models.EmailField(max_length=50)
 
 
-# Create your models her
+# Create your models her:
