@@ -22,3 +22,4 @@ class Turma(models.Model):
     cod_turma = models.CharField(max_length=12)
     disc = models.ForeignKey(DiscMinistrada, on_delete=models.CASCADE)
 # Create your models here.
+
