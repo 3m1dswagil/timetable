@@ -26,6 +26,11 @@ body {
     display: none;
 }
 
+th {
+  font-family: cursive;
+  caret-color: red;
+=======
+
 .divisoriaslist {
     width: 150px;
     height: 150px;
