@@ -8,10 +8,16 @@ class Disciplina(models.Model):
     cod_disc = models.CharField(max_length=50)
 
 
-    def publish(self):
-        self.published_date = timezone.now()
-        self.save()
 
-    def __str__(self):
-        return self.title
-# Create your models here.
+class Professor(models.Model):
+        Nome = models.CharField(max_length=50)
+        disciplinas = models.ForeignKey('Disciplina')
+
+
+
+class Aula(models.Model):
+        NomeProf = models.CharField(max_length=50)
+        email = models.EmailField(max_length=50)
+
+
+# Create your models her
