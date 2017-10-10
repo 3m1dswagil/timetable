@@ -25,3 +25,7 @@ body {
 .mySlides {
     display: none;
 }
+th {
+  font-family: cursive;
+  caret-color: red;
+}

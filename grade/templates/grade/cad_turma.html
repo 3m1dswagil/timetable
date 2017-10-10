@@ -1,0 +1,14 @@
+{% extends 'grade/base.html' %}
+
+{% block content %}
+    <h1>Cadastro  Turma</h1>
+    <form method="POST" class="post-form">{% csrf_token %}
+        {{ form.as_p }}
+        <div align='right'>
+          <a class="btn btn-default" href="i" role="button">Cancelar</a>
+          <button type="submit" class="btn btn-default">Salvar</button>
+        </div>
+    </form>
+
+    </div>
+{% endblock %}
