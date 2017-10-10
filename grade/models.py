@@ -9,14 +9,17 @@ class Disciplina(models.Model):
 
 
 class Professor(models.Model):
-        Nome = models.CharField(max_length=50)
-        disciplinas = models.ForeignKey('Disciplina')
+    nome = models.CharField(max_length=70)
+    cod_prof = models.CharField(max_length=12)
+    disc_p = models.ManyToManyField(Disciplina)
 
+class DiscMinistrada(models.Model):
+    profId = models.ForeignKey(Professor, on_delete=models.CASCADE)
+    discId = models.ForeignKey(Disciplina, on_delete=models.CASCADE)
 
+class Turma(models.Model):
+    nome = models.CharField(max_length=20)
+    cod_turma = models.CharField(max_length=12)
+    disc = models.ForeignKey(DiscMinistrada, on_delete=models.CASCADE)
+# Create your models here.
 
-class Aula(models.Model):
-        NomeProf = models.CharField(max_length=50)
-        email = models.EmailField(max_length=50)
-
-
-# Create your models her:
