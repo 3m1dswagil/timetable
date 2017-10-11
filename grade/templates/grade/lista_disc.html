@@ -1,0 +1,32 @@
+{% extends 'grade/base.html' %}
+{% load staticfiles %}
+{% block content %}
+<div class="container">
+    <div class="row">
+      <div class="col-sm-6">
+        <H1 align="center" style="margin-top:20px;">Disciplinas</H1>
+      </div>
+      <div class="col-sm-4">
+        <div align="right" style="margin-top:80px;">
+          <ul style="width: 180px; height: 200px; overflow: auto; list-style-type: none; border: solid 2px black; border-radius:3px;">
+            {% for discps in data %}
+              <li style="font-size:20px;">{{ discps.disciplina }}</li>
+            {% empty %}
+
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div align="center" style="margin-top:60px;">
+          <a href="/novadisciplina" Style="text-decoration: none; box-sizing: border-box; border: 1px solid black; color: white; background-color: rgb(106, 126, 170); padding: 5px 5px 5px 5px; font-size: 20px; border-radius:3px;">
+          Criar Disciplina</a>
+          <a href="#" Style="text-decoration: none; box-sizing: border-box; border: 1px solid black; color: white; background-color: rgb(241, 193, 53); padding: 5px 5px 5px 5px; font-size: 20px; margin-left:25px; border-radius:3px;">
+          Alterar Disciplina</a>
+          <a href="#" Style="text-decoration: none; box-sizing: border-box; border: 1px solid black; color: white; background-color: rgb(224, 101, 102); padding: 5px 5px 5px 5px; font-size: 20px; margin-left:25px; border-radius:3px;">
+          Excluir Disciplina</a>
+      </div>
+    </div>
+  </div>
+{% endblock %}

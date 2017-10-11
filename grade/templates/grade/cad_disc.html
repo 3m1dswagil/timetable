@@ -1,11 +1,22 @@
 {% extends 'grade/base.html' %}
 
 {% block content %}
-    <h1>Nova disciplina</h1>
-    <form method="POST" class="post-form">{% csrf_token %}
-        {{ form.as_p }}
-        <div align='right'>
-          <button type="submit" class="btn btn-default">Salvar</button>
-        </div>
-    </form>
+  <div class="content container">
+      <div class="row">
+          <div class="col-md-4">
+
+          </div>
+          <div class="col-md-4">
+            <h1>Nova disciplina</h1>
+            <form method="POST" class="post-form">{% csrf_token %}
+                {{ form.as_p }}
+                <div align='right'>
+                  <button type="submit" class="btn btn-default">Salvar</button>
+                  <a href="/disciplinas" Style="text-decoration: none; box-sizing: border-box; color: white; background-color: rgb(224, 101, 102); padding: 8.5px; margin-left:25px; border-radius:3px">
+                  Cancelar</a>
+                </div>
+            </form>
+          </div>
+      </div>
+  </div>
 {% endblock %}
