@@ -16,4 +16,5 @@ class Migration(migrations.Migration):
             model_name='disciplina',
             name='author',
         ),
+
     ]
