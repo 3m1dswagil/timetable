@@ -3,10 +3,6 @@ from django import forms
 from django.forms import ModelForm
 from .models import Disciplina
 from .models import Professor
-from .models import Aula
-
-
-
 
 class DiscForm(forms.ModelForm):
 
@@ -26,39 +22,22 @@ class DiscForm(forms.ModelForm):
                 'required': 'Este campo é obrigatório'
             },
         }
+
 class ProfForm(forms.ModelForm):
 
     class Meta:
         model = Professor
-        fields = ['Nome', 'disciplinas']
+        fields = ['nome', 'cod_prof']
         widgets = {
-            'Nome': forms.TextInput(attrs={'class': 'form-control', 'maxlength': 255, 'placeholder': 'João da Silva'}),
-            'disciplinas': forms.TextInput(attrs={'class': 'form-control', 'maxlength': 255, 'placeholder': 'Matematica'}),
+            'nome': forms.TextInput(attrs={'class': 'form-control', 'maxlength': 255, 'placeholder': 'Nome do professor'}),
+            'cod_prof': forms.TextInput(attrs={'class': 'form-control', 'maxlength': 255, 'placeholder': '123prof123'}),
         }
 
         error_messages = {
-            'Nome':{
+            'nome':{
                 'required': 'Este campo é obrigatório'
             },
-            'disciplinas':{
-                'required': 'Este campo é obrigatório'
-            },
-        }
-class AulaForm(forms.ModelForm):
-
-    class Meta:
-        model = Aula
-        fields = ['NomeProf', 'email']
-        widgets = {
-            'NomeProf': forms.TextInput(attrs={'class': 'form-control', 'maxlength': 255, 'placeholder': 'José da Silva'}),
-            'email': forms.TextInput(attrs={'class': 'form-control', 'maxlength': 255, 'placeholder': '@gmail'}),
-        }
-
-        error_messages = {
-            'NomeProf':{
-                'required': 'Este campo é obrigatório'
-            },
-            'email':{
+            'cod_prof':{
                 'required': 'Este campo é obrigatório'
             },
         }
