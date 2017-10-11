@@ -2,6 +2,7 @@
 from django import forms
 from django.forms import ModelForm
 from .models import Disciplina
+from django.contrib.auth.models import User
 
 class DiscForm(forms.ModelForm):
 
@@ -21,3 +22,7 @@ class DiscForm(forms.ModelForm):
                 'required': 'Este campo é obrigatório'
             },
         }
+
+class LoginForm(forms.Form):
+    username = forms.CharField()
+    password = forms.CharField(widget=forms.PasswordInput)
