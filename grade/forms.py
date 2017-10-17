@@ -3,6 +3,7 @@ from django import forms
 from django.forms import ModelForm
 from .models import Disciplina
 from .models import Professor
+from .models import Turma
 
 class DiscForm(forms.ModelForm):
 
@@ -38,6 +39,25 @@ class ProfForm(forms.ModelForm):
                 'required': 'Este campo é obrigatório'
             },
             'cod_prof':{
+                'required': 'Este campo é obrigatório'
+            },
+        }
+
+class TurmaForm(forms.ModelForm):
+
+    class Meta:
+        model = Turma
+        fields = ['cod_turma', 'turma']
+        widgets = {
+            'cod_turma': forms.TextInput(attrs={'class': 'form-control', 'maxlength': 255, 'placeholder': '123turmabbb'}),
+            'turma': forms.TextInput(attrs={'class': 'form-control', 'maxlength': 255, 'placeholder': 'vespertinobbb'}),
+        }
+
+        error_messages = {
+            'turma':{
+                'required': 'Este campo é obrigatório'
+            },
+            'cod_turma':{
                 'required': 'Este campo é obrigatório'
             },
         }
