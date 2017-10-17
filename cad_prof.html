@@ -1,7 +1,8 @@
+
 {% extends 'grade/base.html' %}
 
 {% block content %}
-    <h1>Nova Disciplina</h1>
+    <h1>Cadastro  professor</h1>
     <form method="POST" class="post-form">{% csrf_token %}
         {{ form.as_p }}
         <div align='center'>
@@ -9,4 +10,6 @@
           <button type="submit" class="btn btn-default">Salvar</button>
         </div>
     </form>
+
+    </div>
 {% endblock %}
