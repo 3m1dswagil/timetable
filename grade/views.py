@@ -38,13 +38,12 @@ def disc_list(request):
     return TemplateResponse(request, 'grade/lista_disc.html', {'data': data})
 
 def prof_list(request):
-    data = Professor.objects.all()
-    return TemplateResponse(request, 'grade/lista_prof.html', {'data': data})
+    datas = Professor.objects.all()
+    return TemplateResponse(request, 'grade/lista_prof.html', {'datas': datas})
 
 def turma_list(request):
     data = Turma.objects.all()
     return TemplateResponse(request, 'grade/lista_turma.html', {'data': data})
-
 
 def pag_incial(request):
     return render(request, 'grade/pag_inicial.html')

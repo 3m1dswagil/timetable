@@ -28,11 +28,11 @@ class ProfForm(forms.ModelForm):
 
     class Meta:
         model = Professor
-        fields = ['nome', 'cod_prof']
+        fields = ['nome', 'cod_prof', 'disc_p']
         widgets = {
             'nome': forms.TextInput(attrs={'class': 'form-control', 'maxlength': 255, 'placeholder': 'Nome do professor'}),
             'cod_prof': forms.TextInput(attrs={'class': 'form-control', 'maxlength': 255, 'placeholder': '123prof123'}),
-        }
+            }
 
         error_messages = {
             'nome':{
@@ -49,8 +49,8 @@ class TurmaForm(forms.ModelForm):
         model = Turma
         fields = ['cod_turma', 'turma']
         widgets = {
-            'cod_turma': forms.TextInput(attrs={'class': 'form-control', 'maxlength': 255, 'placeholder': '123turmabbb'}),
-            'turma': forms.TextInput(attrs={'class': 'form-control', 'maxlength': 255, 'placeholder': 'vespertinobbb'}),
+            'cod_turma': forms.TextInput(attrs={'class': 'form-control', 'maxlength': 255, 'placeholder': '123matematica123'}),
+            'turma': forms.TextInput(attrs={'class': 'form-control', 'maxlength': 255, 'placeholder': 'Matematica'}),
         }
 
         error_messages = {
