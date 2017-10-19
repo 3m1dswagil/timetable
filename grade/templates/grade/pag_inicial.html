@@ -1,7 +1,23 @@
 {% extends 'grade/base.html' %}
 
 {% block content %}
-<a class="btn btn-default" href="disciplinas" role="button">Cadastrar Disciplina</a>
-<a class="btn btn-default" href="professores" role="button">Cadastrar Professor</a>
-<a class="btn btn-default disabled" href="#" role="button">Cadastrar Turma</a>
+    <h1>InovaHora, </br>bem vindo!</h1>
+   <!-- <form method="POST" class="post-form">{% csrf_token %}
+      #  {{ form.as_p }}
+        <div align='right'>
+          <button type="submit" class="btn btn-default">Salvar</button>
+          <table>!>
+
+    </div>
+-->
+</br>
+  <div align='left'>
+      <a class="btn btn-default" href="disciplinas" role="button"><b>DISCIPLINA</b></a>
+      <a class="btn btn-default" href="professores" role="button"><b>PROFESSOR</b></a>
+      <a class="btn btn-default" href="turmas" role="button"><b>TURMA</b></a>
+  </div>
+
+
+
+
 {% endblock content %}
