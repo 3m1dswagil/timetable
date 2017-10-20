@@ -16,8 +16,8 @@
       <div class="col-sm-4">
         <div align="center" style="margin-top:80px;">
           <ul style="width: 150px; height: 150px; overflow: auto; list-style-type: none; border: solid 2px black;">
-            {% for turmas in data %}
-              <li style="font-size:20px;">{{ turmas.nome }}</li>
+            {% for turma in data %}
+              <li style="font-size:20px;">{{ turma.turma }}</li>
             {% empty %}
 
             {% endfor %}
