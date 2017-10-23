@@ -2,10 +2,10 @@ dist: trusty
 sudo: false
 language: python
 python:
-- '3.3'
+  - '3.5'
 
 jdk:
-- oraclejdk8
+  - oraclejdk8
 
 addons:
   sonarqube:
@@ -18,4 +18,4 @@ branches:
   - desenvolvimento
 
 script:
-- sonar-scanner
+  - sonar-scanner
