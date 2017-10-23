@@ -1,0 +1,7 @@
+sonar.projectKey = timetable-exemplo
+sonar.projectName = timetable-exemplo
+sonar.projectVersion = 1.5
+sonar.sources = wsgi
+sonar.language =py
+sonar.sourceEncoding=UTF-8
+sonar.host.url = http://sonarqube.com
