@@ -9,7 +9,7 @@ jdk:
 
 addons:
   sonarqube:
-    organization: "timetable"
+    organization: "3m1dswagil-github"
     token:
       secure: "$SONAR_TOKEN"
 branches:
