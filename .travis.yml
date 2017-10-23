@@ -12,13 +12,10 @@ addons:
     organization: "timetable"
     token:
       secure: "$SONAR_TOKEN"
-services:
-- postgres
-
 branches:
   only:
   - master
-  - Desenvolvimento
+  - desenvolvimento
 
 script:
 - sonar-scanner
