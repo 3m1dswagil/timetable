@@ -1,0 +1,14 @@
+{% extends 'grade/base.html' %}
+
+{% block content %}
+    <h1>Cadastro  Professor</h1>
+    <form method="POST" class="post-form">{% csrf_token %}
+        {{ form.as_p }}
+        <div align='center'>
+          <a class="btn btn-default" href="professores" role="button">CANCELAR</a>
+          <button type="submit" class="btn btn-default">SALVAR</button>
+        </div>
+    </form>
+
+    </div>
+{% endblock %}

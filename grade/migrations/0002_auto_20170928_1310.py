@@ -31,4 +31,38 @@ class Migration(migrations.Migration):
         migrations.DeleteModel(
             name='Post',
         ),
+    migrations.CreateModel(
+            name='Professor',
+            fields=[
+                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('Nome', models.CharField(max_length=50)),
+                ('disc_p', models.ForeignKey('Disciplina')),
+                ('author', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL)),
+            ],
+        ),
+        migrations.RemoveField(
+            model_name='post',
+            name='author',
+        ),
+        migrations.DeleteModel(
+            name='Post',
+        ),
+
+       migrations.CreateModel(
+            name='Aula',
+            fields=[
+                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('NomeProf',  models.CharField(max_length=50)),
+                ('email', models.EmailField(max_length=50)),
+                ('author', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL)),
+            ],
+        ),
+        migrations.RemoveField(
+            model_name='post',
+            name='author',
+        ),
+        migrations.DeleteModel(
+            name='Post',
+        ),
+
     ]
