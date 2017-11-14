@@ -3,9 +3,9 @@ from __future__ import unicode_literals
 from django.shortcuts import render, redirect, get_object_or_404
 from .forms import Disciplina_form
 from .forms import Professor_form
-from .forms import Turma_form
+# from .forms import Turma_form
 from django.views.generic import ListView
-from grade.models import Disciplina, Professor, Turma, Disciplina_ministrada
+from grade.models import Disciplina, Professor, Disciplina_ministrada, Turma
 from django.template.response import TemplateResponse
 
 # Create your views here.
@@ -47,7 +47,20 @@ def turma_new(request):
     form = Turma_form(request.POST or None)
     if request.method == 'POST':
         if form.is_valid():
-            form.save()
+            disciplina_disponivel = Disciplina_ministrada.objects.all()
+
+            for objeto in disciplina_disponivel:
+
+                relacao = Relacao_disciplina_ch()
+                relacao.carga_horaria = form.cleaned_data['carga_horaria']
+                relacao.disciplina_ministrada = objeto
+                relacao.save()
+
+            turma = Turma()
+            turma.nome = form.cleaned_data['nome']
+            turma.codigo = form.cleaned_data['codigo']
+            turma.relacao_disciplina_ch = relacao
+            turma.save()
             return redirect("turma_list")
     return render(request, 'grade/cad_turma.html', {'form': form})
 

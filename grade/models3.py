@@ -4,24 +4,20 @@ from django.utils import timezone
 
 
 RESTRICAO_DIA_CHOICES = (
-    ('0', 'Nenhuma'),
-    ('2', 'Segunda'),
-    ('3', 'Terça'),
-    ('4', 'Quarta'),
-    ('5', 'Quinta'),
-    ('6', 'Sexta'),
+    ('0', 'Segunda'),
+    ('1', 'Terça'),
+    ('2', 'Quarta'),
+    ('3', 'Quinta'),
+    ('4', 'Sexta'),
 )
 
 RESTRICAO_HORA_CHOICES = (
-    ('0', 'Nenhuma'),
-    ('1', 'Primeira'),
-    ('2', 'Segunda'),
-    ('3', 'Terceira'),
-    ('4', 'Quarta'),
-    ('5', 'Quinta'),
-    ('6', 'Sexta'),
-    ('7', 'Todas'),
-
+    ('0', 'Primeira'),
+    ('1', 'Segunda'),
+    ('2', 'Terceira'),
+    ('3', 'Quarta'),
+    ('4', 'Quinta'),
+    ('5', 'Sexta'),
 )
 
 TURNO_CHOICES = (
@@ -45,12 +41,10 @@ class Professor(models.Model):
     #coordenador = models.ForeignKey('Coordenador')
     #disciplina = models.ForeignKey('Disciplina')
     restricao_dia_semana =  models.CharField(max_length=1, choices=RESTRICAO_DIA_CHOICES)
-    restricao_horario =  models.TextField(max_length=1, choices=RESTRICAO_HORA_CHOICES)
+    restricao_horario =  models.CharField(max_length=1, choices=RESTRICAO_HORA_CHOICES)
 
     def __str__(self):
             return str(self.nome)
-
-
 
 class Disciplina(models.Model):
     nome = models.CharField(max_length=50)
@@ -58,9 +52,6 @@ class Disciplina(models.Model):
 
     def __str__(self):
          return str(self.nome)
-
-    def __unicode__(self):
-         return u'{f}'.format(f=self.nome)
 
 class Disciplina_ministrada(models.Model):
     codigo_disciplina = models.CharField(max_length=50)

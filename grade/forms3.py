@@ -50,24 +50,20 @@ class Professor_form(forms.ModelForm):
 '''
 
 RESTRICAO_DIA_CHOICES = (
-    ('0', 'Nenhuma'),
-    ('2', 'Segunda'),
-    ('3', 'Terça'),
-    ('4', 'Quarta'),
-    ('5', 'Quinta'),
-    ('6', 'Sexta'),
+    ('0', 'Segunda'),
+    ('1', 'Terça'),
+    ('2', 'Quarta'),
+    ('3', 'Quinta'),
+    ('4', 'Sexta'),
 )
 
 RESTRICAO_HORA_CHOICES = (
-    ('0', 'Nenhuma'),
-    ('1', 'Primeira'),
-    ('2', 'Segunda'),
-    ('3', 'Terceira'),
-    ('4', 'Quarta'),
-    ('5', 'Quinta'),
-    ('6', 'Sexta'),
-    ('7', 'Todas'),
-
+    ('0', 'Primeira'),
+    ('1', 'Segunda'),
+    ('2', 'Terceira'),
+    ('3', 'Quarta'),
+    ('4', 'Quinta'),
+    ('5', 'Sexta'),
 )
 class Professor_form(forms.Form):
     nome = forms.CharField(label='Nome', max_length=100)
@@ -75,6 +71,7 @@ class Professor_form(forms.Form):
     disciplinas = forms.ModelMultipleChoiceField(queryset=Disciplina.objects.all())
     restricao_dia_semana = forms.ChoiceField(choices=RESTRICAO_DIA_CHOICES, widget=forms.RadioSelect())
     restricao_horario = forms.MultipleChoiceField(choices=RESTRICAO_HORA_CHOICES, widget=forms.CheckboxSelectMultiple())
+
 
 class Turma_form(forms.ModelForm):
 

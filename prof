@@ -1,0 +1,10 @@
+﻿CREATE TABLE grade_prof
+(
+    id SERIAL,
+    nome character varying(70),
+    cod_prof character varying(70),
+    disc_p integer,
+    PRIMARY KEY (id),
+    FOREIGN KEY (disc_p) REFERENCES grade_disciplina (id)
+    
+);
