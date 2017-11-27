@@ -25,3 +25,21 @@ body {
 .mySlides {
     display: none;
 }
+th {
+  font-family: cursive;
+  caret-color: red;
+
+.divisoriaslist {
+    width: 150px;
+    height: 150px;
+    overflow: auto;
+    list-style-type: none;
+    border: solid 2px black;
+}
+.block_header{
+background: #178F8D;
+color: #fff;
+padding: 5px;
+text-align: left;
+margin: 3px;
+}

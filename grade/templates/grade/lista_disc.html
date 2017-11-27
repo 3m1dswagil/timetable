@@ -1,0 +1,67 @@
+{% extends 'grade/base.html' %}
+{% load staticfiles %}
+<head>
+      <meta charset="UTF-8">
+      <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+      <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+      <link rel="stylesheet" type="text/css" href="{% static 'css/grade.css' %}">
+</head>
+
+<body>
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col-md-12" class="col-sm-12">
+
+      <H1 align='center' style="margin-top:50px;">EDIÇÃO DE DISCIPLINA</H1>
+      </br>
+      </br>
+      </div>
+<div align='left'class="col-sm-12">
+
+    <a href="/" Style="text-decoration: none; border-radius: 5px; text-align: center;  color: white; background-color: #808080; padding: 5px 20px 5px 5px; font-size: 15px; font-align:center; margin-left:20px">
+    <b text-align='center'> VOLTAR </b></a>
+    <a href="/novadisciplina" Style="text-decoration: none; border-radius: 5px; text-align: center;  color: white; background-color: #4682B4; padding: 5px 20px 5px 5px; font-size: 15px; font-align:center; margin-left:20px">
+    <b text-align='center'> NOVA </b></a>
+  </br>
+  </br>
+  </br>
+  </br>
+</div>
+</div>
+
+  <div id="list" class="row">
+      <div class="table-responsive col-md-12">
+          <table   class="table table-striped" cellspacing="0" cellpadding="0">
+              <thead>
+                  <tr>
+                      <th>Código</th>
+                      <th>Disciplina</th>
+                      <th>Carga Horária</th>
+                      <th class="actions">Ações</th>
+                   </tr>
+              </thead>
+              {% for disc in data %}
+              <tbody>
+                <td>{{ disc.codigo }}
+                <td>{{ disc.nome }}
+                <td>{{ disc.carga_horaria }} aula(s)/semana
+                        <td class="actions">
+                          <a class="btn btn-warning btn-xs" href="novadisciplina">Editar</a>
+                          <a class="btn btn-danger btn-xs"  href="#" data-toggle="modal" data-target="#delete-modal">Excluir</a>
+                      </td>
+                    </td></td><td>
+                      {% endfor %}
+                  </tr>
+</div>
+              </tbody>
+           </table>
+</div>
+</div>
+       </div>
+   </div> <!-- /#list -->
+  <div class="col-sm-6">
+    <div align="right" style="margin-top:20px;">
+
+  {% endblock %}
+</body>

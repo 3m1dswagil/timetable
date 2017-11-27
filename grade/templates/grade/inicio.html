@@ -1,0 +1,25 @@
+
+{% extends 'grade/base.html' %}
+
+{% block content %}
+
+    <h1 align ='center'>Bem Vindo ao InovaHora!</h1>
+   <!-- <form method="POST" class="post-form">{% csrf_token %}
+      #  {{ form.as_p }}
+        <div align='right'>
+          <button type="submit" class="btn btn-default">Salvar</button>
+          <table>!>
+
+    </div>
+-->
+<h2>Escolha o que deseja fazer:</h2>
+<div align='left'>
+
+<form>
+<a class="btn btn-default" href="novadisciplina" role="button">Cadastrar Disciplina</a>
+<a class="btn btn-default" href="novoprofessor" role="button">Cadastrar Professor</a>
+<a class="btn btn-default disabled" href="professores" role="button">Cadastrar Turma</a>
+</div>
+</form>
+
+{% endblock content %}

@@ -1,0 +1,12 @@
+{% extends 'grade/base.html' %}
+
+{% block content %}
+    <h1>Nova Turma</h1>
+    <form method="POST" class="post-form">{% csrf_token %}
+        {{ form.as_p }}
+      <div align='center'>
+          <a class="btn btn-default" href="turma" role="button">CANCELAR</a>
+          <button type="submit" href="turma_list" class="btn btn-default">Cadastrar Disciplinas</button>
+        </div>
+    </form>
+{% endblock %}
