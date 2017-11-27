@@ -15,18 +15,8 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
-from django.contrib.auth.views import login
-from django.contrib.auth.views import logout
-from django.conf.urls import url
-from django.contrib.auth import views as auth_views
-# from  import views
-
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'', include('grade.urls')),
-
-    # url(r'^login/$', auth_views.login, name='login')
-     url(r'^login/', auth_views.login, name='login.html'),
-     url(r'^logout/', auth_views.logout, name='logged_out'),
 ]

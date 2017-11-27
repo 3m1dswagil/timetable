@@ -25,7 +25,6 @@ body {
 .mySlides {
     display: none;
 }
-
 th {
   font-family: cursive;
   caret-color: red;
@@ -36,4 +35,11 @@ th {
     overflow: auto;
     list-style-type: none;
     border: solid 2px black;
+}
+.block_header{
+background: #178F8D;
+color: #fff;
+padding: 5px;
+text-align: left;
+margin: 3px;
 }

@@ -5,6 +5,7 @@
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
         <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="{% static 'css/grade.css' %}">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -26,7 +27,7 @@
           </div>
           <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
-              <li class="active"><a href="i">Inicio</a></li>
+              <li class="active"><a href="/">Início</a></li>
               <li><a href="#">Perfil</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
@@ -36,7 +37,14 @@
           </div>
         </div>
       </nav>
-      {% block content %}
-      {% endblock %}
+      <div  class="content container" >
+                <div class="row" class="col-md-12">
+                  </div></div>
+                <div align='left' class="col-md-4">
+                  {% block content %}
+                  {% endblock %}
+                </div>
+
+
     </body>
 </html>

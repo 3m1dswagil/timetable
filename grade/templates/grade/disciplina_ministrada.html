@@ -1,0 +1,36 @@
+{% extends 'grade/base.html' %}
+
+{% block content %}
+    <h1>Nova Turma</h1>
+    <form method="POST" class="post-form">{% csrf_token %}
+        {{ form.as_p }}
+
+        <!-- <div class="table-responsive col-md-12">
+            <table   class="table table-striped" cellspacing="0" cellpadding="0">
+                <thead>
+                    <tr>
+                        <th>Disciplina</th>
+                        <th>Professor</th>
+                     </tr>
+                </thead>{% for dado in dados %}
+                <tbody>
+                  <td>{{ dado.disciplina }}
+                  <td>{{ dado.professor }}
+                          <!- <td class="actions">
+                            <a class="btn btn-success btn-xs" href="view.html">Visualizar</a>
+                            <a class="btn btn-warning btn-xs" href="edit.html">Editar</a>
+                            <a class="btn btn-danger btn-xs"  href="#" data-toggle="modal" data-target="#delete-modal">Excluir</a>
+                        </td> -->
+                      <!-- </td></td><td>
+                        {% endfor %}
+                    </tr>
+    </div>
+                </tbody>
+             </table>
+    </div> -->
+        <div align='center'>
+          <a class="btn btn-default" href="turma" role="button">CANCELAR</a>
+          <button type="submit" href="turma" class="btn btn-default">SALVAR</button>
+        </div>
+    </form>
+{% endblock %}
